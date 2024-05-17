@@ -1,0 +1,26 @@
+{
+    "region": "us-east-1",
+    "cron_schedule": {
+      "minute": "0",
+      "hour": "10",
+      "month": "*",
+      "day": "*",
+      "year": "*"
+    },
+    "notify_email": "xxx@yyy.com",
+    "rule": {
+      "include": {
+        "max_days": 30,
+        "tag": {
+          "env": ["dev","int"],
+          "cost_center": ["120","130"]
+        }
+      },
+      "exclude": {
+        "tag": {
+          "env": ["uat","prod"],
+          "cost_center": ["150"]
+        }
+      }
+    }
+}
